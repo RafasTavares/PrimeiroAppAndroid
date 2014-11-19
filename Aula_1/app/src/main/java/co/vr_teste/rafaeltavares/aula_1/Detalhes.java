@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.Calendar;
 import java.util.Date;
 
 
@@ -21,10 +22,8 @@ public class Detalhes extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalhes);
-        TextView txtView = (TextView) findViewById(R.id.txtHora);
-        Date data = new Date();
-        data.getTime();
-        txtView.setText(data.toString());
+        TextView txt = (TextView) findViewById(R.id.txtHora);
+        txt.setText("Hora Atual");
     }
 
 
