@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 public class home extends Activity {
@@ -28,6 +29,8 @@ public class home extends Activity {
                 // ---- OU -----
                 //inicia o intent e pass a nova pasta
                 startActivity(new Intent(getApplicationContext(), Detalhes.class));
+                //finalizda a actinity atual antes de iniciar a proxima
+                finish();
             }
         });
     }
@@ -39,7 +42,6 @@ public class home extends Activity {
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -50,5 +52,13 @@ public class home extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        //Inicia uma constante do tipo Toast passando (minha activity, um texto a ser exibido, e a duraçãode exibição)
+        //e para exibir eu insiro o show() para mostrar
+        Toast.makeText(home.this, " método on back pressed" , Toast.LENGTH_LONG).show();
+        super.onBackPressed();
     }
 }
