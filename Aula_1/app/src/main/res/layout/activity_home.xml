@@ -9,9 +9,10 @@
     tools:context=".home">
 
 <Button
+    android:layout_centerHorizontal="true"
     android:onClick="ClickButtonLink"
     android:id="@+id/Navagacao"
     android:text="@string/title_activity_detalhes"
-    android:layout_width="wrap_content"
+    android:layout_width="1000px"
     android:layout_height="wrap_content" />
 </RelativeLayout>

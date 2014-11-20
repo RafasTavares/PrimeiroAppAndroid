@@ -9,9 +9,16 @@
     tools:context="co.vr_teste.rafaeltavares.aula_1.Detalhes">
 
     <TextView
+        android:layout_centerHorizontal="true"
         android:id="@+id/txtHora"
         android:text="Activity Detalhes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
+    <Button
+        android:layout_marginTop="100px"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnSite"
+        android:text="Meu Site"
+        android:layout_width="1000px"
+        android:layout_height="wrap_content" />
 </RelativeLayout>

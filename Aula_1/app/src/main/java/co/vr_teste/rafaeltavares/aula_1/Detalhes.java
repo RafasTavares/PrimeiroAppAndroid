@@ -15,6 +15,7 @@ import org.w3c.dom.Text;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 
 public class Detalhes extends Activity {
@@ -22,10 +23,21 @@ public class Detalhes extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalhes);
+        Button btnSite = (Button) findViewById(R.id.btnSite);
         TextView txt = (TextView) findViewById(R.id.txtHora);
-        txt.setText("Hora Atual");
-    }
+        txt.setText("Info Calendar: " + (Calendar.getInstance().getTime()).toString());
+        btnSite.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("http://rafaeltavares.co"));
+                startActivity(intent);
 
+            }
+        });
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
