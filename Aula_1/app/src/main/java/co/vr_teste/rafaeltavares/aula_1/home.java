@@ -28,7 +28,7 @@ public class home extends Activity {
                 //startActivity(intent);
                 // ---- OU -----
                 //inicia o intent e pass a nova pasta
-                startActivity(new Intent(getApplicationContext(), Detalhes.class));
+                startActivity(new Intent(getApplicationContext(), Grid_View.class));
                 //finalizda a actinity atual antes de iniciar a proxima
                 finish();
             }

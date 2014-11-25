@@ -20,6 +20,10 @@
             android:name=".Detalhes"
             android:label="@string/title_activity_detalhes" >
         </activity>
+        <activity
+            android:name=".Grid_View"
+            android:label="@string/title_activity_grid__view" >
+        </activity>
     </application>
 
 </manifest>

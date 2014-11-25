@@ -5,5 +5,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_detalhes">Detalhes</string>
+    <string name="title_activity_grid__view">Grid_View</string>
 
 </resources>
