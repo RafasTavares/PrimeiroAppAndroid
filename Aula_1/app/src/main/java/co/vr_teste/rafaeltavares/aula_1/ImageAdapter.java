@@ -25,7 +25,7 @@ public class ImageAdapter extends BaseAdapter {
     public Object getItem(int position) {
         return null;
     }
-s
+
     public long getItemId(int position) {
         return 0;
     }

@@ -6,22 +6,26 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
 
 
-public class Grid_View extends Activity {
+public class GridViewLayout extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grid__view);
-        GridView grid =  (GridView) findViewById(R.id.gridview);
-        grid.setAdapter(new ImageAdapter(this));
-        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        setContentView(R.layout.activity_grid_view_layout);
+        findViewById(R.id.btnDetalhe).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), Detalhes.class));
+                //finalizda a actinity atual antes de iniciar a proxima
+                finish();
+            }
+        });
+        findViewById(R.id.btnGridview).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Grid_View.class));
                 //finalizda a actinity atual antes de iniciar a proxima
                 finish();
             }
@@ -31,7 +35,8 @@ public class Grid_View extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.grid__view, menu);
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.grid_view_layout, menu);
         return true;
     }
 

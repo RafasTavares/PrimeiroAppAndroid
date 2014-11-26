@@ -24,6 +24,10 @@
             android:name=".Grid_View"
             android:label="@string/title_activity_grid__view" >
         </activity>
+        <activity
+            android:name=".GridViewLayout"
+            android:label="@string/title_activity_grid_view_layout" >
+        </activity>
     </application>
 
 </manifest>
